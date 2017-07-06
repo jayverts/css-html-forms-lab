@@ -34,7 +34,7 @@
 				    	</select>
 					</div>
 					<div class="row formGroup">
-				    	<label for="mission">Misison Statement:</label>
+				    	<label for="mission">Mission Statement:</label>
 				    	<textarea id="mission" name="mission"></textarea>
 					</div>
 
@@ -107,21 +107,31 @@
 			// results.className = 'container results';
 			// main.appendChild(results);
 		};
-
+    
 		$("form").on("submit", function(event){
-
+			event.preventDefault();
+      
+      makeResults();
 		    // Stop the form from submitting
 
 	    	// Run the 'makeResults' function seen above
-
-	    	/*
-			
+	var verb1 = $("#verb-1").val();
+	var name = $("#name").val();
+	var missionStatement = $("#mission").val();
+	var firstRadio = $("").val();
+	var firstNoun = $("#noun-1").val();
+	var secondNoun = $("noun-2").val();
+	var secondRadio = $("").val();
+      $(".results").append("<p>").append("Once upon a time there was a developer named" + " " + name+".");
+	  $(".results").append("<p>").append(name + " " + "came to General Assembly to" + " " + verb1 + " " + "the great mountain of programming knowledge.");
+	  $(".results").append("<p>").append(missionStatement + ", " + name + " " + "shouted.");
+	  $(".results").append("<p>").append("Though " + firstRadio + ", " + name + " " + "was able to overcome all obstacles with the power of their " + firstNoun + ".");
+	  $(".results").append("<p>").append("In the end, their sucess can be contributed entirely to their" + " " + secondRadio + " " + secondNoun);
+	    	/* 
 				For each value entered into a form input, add the input to the corresponding sentence, then append the text into the results section:
 
 				"Once upon a time there was a Developer named NAME."
-
 				"NAME came to General Asssembly to VERB1 the great mountain of programming knowledge."
-
 				""MISSION", NAME shouted."
 	
 				"Though SENTIMENT, NAME was able to overcome all obstacles with the power of their NOUN."
@@ -134,4 +144,3 @@
 
 </body>
 </html>
-
