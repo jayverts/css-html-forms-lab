@@ -3,17 +3,18 @@
 <head>
 	<title>CSS HTML Forms Lab</title>
 	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Proza+Libre:400,700,800" rel="stylesheet">
 </head>
 <body>
 	<section id="main">
-		<section class="formSection container">
+		<section class="formSectionContainer">
 			<form class="form" method="GET">
 					<h1>My Dev Story</h1>
-					<div class="row formGroup">
+					<div class="rowFormGroup">
 					    <label for="name">Name:</label>
 					    <input id="name" name="name" >
 				    </div>
-					<div class="row formGroup">
+					<div class="rowFormGroup">
 				    	<label for="verb-1">Verb:</label>
 				    	<select id="verb-1" name="verb-1">
 				    		<optgroup label="Cautious">
@@ -33,12 +34,12 @@
 				    		</optgroup>
 				    	</select>
 					</div>
-					<div class="row formGroup">
+					<div class="rowFormGroup">
 				    	<label for="mission">Mission Statement:</label>
 				    	<textarea id="mission" name="mission"></textarea>
 					</div>
 
-					<div class="row formGroup">
+					<div class="rowFormGroup">
 						<label for="radioButtons">Sentiment:</label>
 						<div class="radioButtons">
 							<div class="radio">
@@ -56,11 +57,11 @@
 				    	</div>
 					</div>
 					
-					<div class="row formGroup">
+					<div class="rowFormGroup">
 				    	<label for="noun-1">Noun:</label>
 				    	<input id="noun-1" name="noun-1">
 					</div>
-					<div class="row formGroup">
+					<div class="rowFormGroup">
 	
 						<label for="checkboxes">Sentiment:</label>
 						<div class="checkboxes">
@@ -79,12 +80,12 @@
 				    	</div>
 
 					</div>
-					<div class="row formGroup">
+					<div class="rowFormGroup">
 				    	<label for="noun-2">Noun:</label>
 				    	<input id="noun-2" name="noun-2">
 					</div>
-					<div class="row formGroup">
-				    	<input type="submit">
+					<div class="rowFormGroup">
+				    	<input id="button" type="submit">
 				    </div>
 				    
 			    </div>
@@ -118,15 +119,17 @@
 	var verb1 = $("#verb-1").val();
 	var name = $("#name").val();
 	var missionStatement = $("#mission").val();
-	var firstRadio = $("").val();
+	var firstRadio = $('input[name=sentiment]:checked').val();
 	var firstNoun = $("#noun-1").val();
-	var secondNoun = $("noun-2").val();
-	var secondRadio = $("").val();
-      $(".results").append("<p>").append("Once upon a time there was a developer named" + " " + name+".");
+	var secondNoun = $("#noun-2").val();
+	var secondRadio = $('input[name=adjective-2]:checked').val();
+      $(".results").append("<p>").append("Once upon a time there was a developer named" + " " + name +".");
 	  $(".results").append("<p>").append(name + " " + "came to General Assembly to" + " " + verb1 + " " + "the great mountain of programming knowledge.");
 	  $(".results").append("<p>").append(missionStatement + ", " + name + " " + "shouted.");
 	  $(".results").append("<p>").append("Though " + firstRadio + ", " + name + " " + "was able to overcome all obstacles with the power of their " + firstNoun + ".");
-	  $(".results").append("<p>").append("In the end, their sucess can be contributed entirely to their" + " " + secondRadio + " " + secondNoun);
+	  $(".results").append("<p>").append("In the end, their success can be contributed entirely to their" + " " + secondRadio + " " + secondNoun + ".");
+	    	
+
 	    	/* 
 				For each value entered into a form input, add the input to the corresponding sentence, then append the text into the results section:
 
