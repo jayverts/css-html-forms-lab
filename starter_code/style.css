@@ -7,8 +7,6 @@
 body {
 	font-family: 'Proza Libre', sans-serif;
 	font-size: 20px;
-	background: #E3E6EC;
-	text-align:  center;
 }
 
 h1 {
@@ -23,11 +21,44 @@ h1 {
 	width: 100%;
 	float: left;
 }
+section{
+	display: inline-block;
+}
+
+section.container.results {
+    width: 480px;
+    position: relative;
+    left: 500px;
+    bottom: 50px;
+    border: 25px;
+    background: aquamarine;
+    padding: 25px;
+    margin: 25px;
+    border-radius: 25px;
+}
+p.lib {
+	position: relative;
+	bottom: 50px;
+}
 #button {
 	float: right;
 	font-weight: 800;
-	background-color: green;
+	background-color: rbga(39, 208, 127, .5);
 	border-radius: 25px;
+}
+
+#button:hover {
+	background-color: rgba(39,208,127,1);
+}
+
+#main{
+    width: 480px;
+    border: 25px;
+    background: #E3E6EC;
+    padding: 25px;
+    margin: 25px;
+    height: 700px;
+    border-radius: 25px;
 }
 
 
